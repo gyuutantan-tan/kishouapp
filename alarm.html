@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>アラーム音</title>
+
+<style>
+body{
+    background:#f7f7f7;
+    font-family:"Yu Gothic",sans-serif;
+    display:flex;
+    justify-content:center;
+}
+
+.phone{
+    width:95%;
+    max-width:380px;
+    min-height:100vh;
+    background:white;
+    border-radius:30px;
+    padding:40px 20px;
+    box-sizing:border-box;
+}
+
+
+.sound{
+    background:#f5f5f5;
+    padding:25px;
+    border-radius:15px;
+    margin:20px 0;
+    font-size:22px;
+}
+
+h2{
+    font-size:32px;
+    margin-bottom:30px;
+}
+
+.back{
+    display:block;
+    text-align:center;
+    background:#ff8eb3;
+    color:white;
+    text-decoration:none;
+    padding:15px;
+    border-radius:30px;
+    margin-top:40px;
+    font-size:20px;
+}
+
+</style>
+
+
+</head>
+<body>
+
+<div class="phone">
+
+<h2>アラーム音を選ぶ</h2>
+
+<div class="sound" onclick="selectSound(this)">
+    🎵 朝のメロディ
+</div>
+
+<div class="sound" onclick="selectSound(this)">
+    🦟 蚊
+</div>
+
+<div class="sound" onclick="selectSound(this)">
+    ⏰ ベーシックアラーム
+</div>
+
+<div class="sound" onclick="selectSound(this)">
+    🎹 ピアノ
+</div>
+<a href="point.html" class="back">
+戻る
+</a>
+
+</div>
+
+<script>
+
+function selectSound(element){
+
+    const sounds =
+    document.querySelectorAll(".sound");
+
+    sounds.forEach(sound => {
+
+        sound.innerHTML =
+        sound.innerHTML.replace(" ✅選択中","");
+
+    });
+
+    element.innerHTML += " ✅選択中";
+
+}
+
+</script>
+
+</script>
+
+</body>
+</html>

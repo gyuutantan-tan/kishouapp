@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>キャラクター衣装</title>
+
+<style>
+body{
+    background:#f7f7f7;
+    font-family:"Yu Gothic",sans-serif;
+    display:flex;
+    justify-content:center;
+}
+
+.phone{
+    width:95%;
+    max-width:380px;
+    min-height:100vh;
+    background:white;
+    border-radius:30px;
+    padding:40px 20px;
+    box-sizing:border-box;
+}
+
+
+.costume{
+    background:#f5f5f5;
+    padding:25px;
+    border-radius:15px;
+    margin:20px 0;
+    font-size:22px;
+}
+
+h2{
+    font-size:32px;
+    margin-bottom:30px;
+}
+
+.back{
+    display:block;
+    text-align:center;
+    background:#ff8eb3;
+    color:white;
+    text-decoration:none;
+    padding:15px;
+    border-radius:30px;
+    margin-top:40px;
+    font-size:20px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="phone">
+
+<h2>衣装を選ぶ</h2>
+
+<div class="costume" onclick="selectCostume(this)">
+    👔 制服
+</div>
+
+<div class="costume" onclick="selectCostume(this)">
+    🧥 パーカー
+</div>
+
+<div class="costume" onclick="selectCostume(this)">
+    ⚽ スポーツウェア
+</div>
+
+<div class="costume" onclick="selectCostume(this)">
+    👑 王様コスチューム
+</div>
+
+<a href="point.html" class="back">
+戻る
+</a>
+
+</div>
+
+<script>
+
+function selectCostume(element){
+
+    const costumes =
+    document.querySelectorAll(".costume");
+
+    costumes.forEach(costume => {
+
+        costume.innerHTML =
+        costume.innerHTML.replace(" ✅選択中","");
+
+    });
+
+    element.innerHTML += " ✅選択中";
+
+}
+
+</script>
+
+</body>
+</html>

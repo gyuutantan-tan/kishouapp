@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>起床記録</title>
+
+<style>
+
+body{
+    background:#f7f7f7;
+    font-family:"Yu Gothic",sans-serif;
+    display:flex;
+    justify-content:center;
+    margin:0;
+}
+
+.phone{
+    width:95%;
+    max-width:380px;
+    min-height:100vh;
+    background:white;
+    border-radius:30px;
+    padding:8px;
+    box-sizing:border-box;
+}
+
+h1{
+    color:#ff7fa4;
+    margin-bottom:8px;
+}
+
+.cards{
+    display:flex;
+    gap:10px;
+    margin-bottom:10px;
+}
+
+.card{
+    flex:1;
+    background:white;
+    border-radius:20px;
+    padding:15px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    text-align:center;
+}
+
+.card-title{
+    color:#ff7fa4;
+    font-weight:bold;
+    font-size:15px;
+}
+
+.card-value{
+    font-size:48px;
+    font-weight:bold;
+    margin-top:10px;
+}
+
+.graph-box{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom:10px;
+}
+
+.graph{
+    height:120px;
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-evenly;
+}
+
+.bar{
+    width:20px;
+    border-radius:12px 12px 0 0;
+}
+
+.mon{height:20px;background:#ff8a80;}
+.tue{height:50px;background:#ffb74d;}
+.wed{height:85px;background:#ffd54f;}
+.thu{height:60px;background:#80cbc4;}
+.fri{height:80px;background:#90caf9;}
+.sat{height:40px;background:#c5a3ff;}
+.sun{height:70px;background:#f48fb1;}
+.day{
+    text-align:center;
+    font-weight:bold;
+}
+
+.record-box{
+    background:white;
+    border-radius:20px;
+    padding:8px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.record{
+    display:flex;
+    justify-content:space-between;
+    padding:12px 0;
+    border-bottom:1px solid #eee;
+    font-size:18px;
+}
+
+.record:last-child{
+    border-bottom:none;
+}
+
+.back{
+    display:block;
+    text-align:center;
+    margin-top:20px;
+    background:#ffdbe6;
+    color:#ff6b9d;
+    text-decoration:none;
+    padding:15px;
+    border-radius:30px;
+    font-weight:bold;
+    font-size:22px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="phone">
+
+<h1>📅 起床記録</h1>
+
+<div class="cards">
+
+    <div class="card">
+        <div class="card-title">起床成功率</div>
+        <div class="card-value">87%</div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">平均起床時間</div>
+        <div class="card-value">6:45</div>
+    </div>
+
+</div>
+
+<div class="graph-box">
+
+    <div class="graph">
+
+        <div class="day">
+            <div class="bar mon"></div>
+            月
+        </div>
+
+        <div class="day">
+            <div class="bar tue"></div>
+            火
+        </div>
+
+        <div class="day">
+            <div class="bar wed"></div>
+            水
+        </div>
+
+        <div class="day">
+            <div class="bar thu"></div>
+            木
+        </div>
+
+        <div class="day">
+            <div class="bar fri"></div>
+            金
+        </div>
+
+        <div class="day">
+            <div class="bar sat"></div>
+            土
+        </div>
+
+        <div class="day">
+            <div class="bar sun"></div>
+            日
+        </div>
+
+    </div>
+
+</div>
+
+<div class="record-box">
+
+    <div class="record">
+        <span>10/27</span>
+        <span>6:45</span>
+        <span>✅</span>
+    </div>
+
+    <div class="record">
+        <span>10/26</span>
+        <span>6:50</span>
+        <span>✅</span>
+    </div>
+
+    <div class="record">
+        <span>10/25</span>
+        <span>7:10</span>
+        <span>❌</span>
+    </div>
+
+   
+
+</div>
+
+<a href="mypage.html" class="back">
+マイページへ戻る
+</a>
+
+</div>
+
+</body>
+</html>
